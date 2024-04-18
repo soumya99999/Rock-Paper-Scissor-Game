@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Animation-Header">
+            <h1>Rock Paper Scissor Game</h1>
+        </div>
+        <div class="Scores">
+            <div class="Scores-Human1">
+                <h2>Computer1</h2>
+                <div class="Scores-Human1-Score">
+                    <h3>0</h3>
+                </div>
+            </div>
+            <div class="Final-Point">
+                <label for="finalPoint">Select Final Point:</label>
+                <select id="finalPoint">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="Scores-Human2">
+                <h2>Computer2</h2>
+                <div class="Scores-Human2-Score">
+                    <h3>0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="Game">
+            <div class="human1">
+                <div class="image1">
+                    <img src="Images/rock.png" alt="">
+                </div>
+                <div class="button button1">
+                    <button>Button1</button>
+                </div>
+            </div>
+            <div class="human2">
+                <div class="image2">
+                    <img src="Images/rock.png" alt="">
+                </div>
+                <div class="button button2">
+                    <button>Button2</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="winnerPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="winnerMessage"></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
