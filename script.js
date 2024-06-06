@@ -75,7 +75,7 @@ function updateImages(choice, image) {
             image.src = "Images/rock.png";
         } else if (choice === 1) {
             image.src = "Images/paper.png";
-        } else {
+        } else if(choice==2){
             image.src = "Images/scissors.png";
         }
     }, 2000);
@@ -85,10 +85,10 @@ function updateScore() {
     if (human1Choice === human2Choice) {
         human1Points += 0;
         human2Points += 0;
-    } else if ((human1Choice - human2Choice + finalScore) % finalScore === 1) {
-        human1Points++;
-    } else {
+    } else if ((human1Choice == 0 && human2Choice == 1) || (human1Choice == 1 && human2Choice ==2) || (human1Choice == 2 && human2Choice == 0)) {
         human2Points++;
+    } else {
+        human1Points++;
     }
     human1Score.textContent = human1Points;
     human2Score.textContent = human2Points;
@@ -129,4 +129,6 @@ function resetScores() {
     human2Points = 0;
     human1Score.textContent = human1Points;
     human2Score.textContent = human2Points;
+    image2.src = "Images/rock.png";
+    image1.src = "Images/rock.png";
 }
